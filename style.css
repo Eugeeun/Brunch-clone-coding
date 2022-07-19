@@ -1,0 +1,17 @@
+.list_slide {
+  width: 500%;
+  transform: translateX(0px);
+  transition: -webkit-transform 0.3s ease 0s;
+  background-color: gray;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.list_slide li {
+  display: inline-block;
+  width: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
