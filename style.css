@@ -4,7 +4,8 @@
   --padding-side: 8px;
 
   /* Font size */
-  --font-large: 48px;
+  --font-very-large: 44px;
+  --font-large: 36px;
   --font-medium: 28px;
   --font-regular: 18px;
   --font-small: 16px;
@@ -12,6 +13,7 @@
 
   /* Color */
   --color-white: #ffffff;
+  --color-less-dark-white: #dad8d8;
   --color-dark-white: #bdbdbd;
   --color-black: #000000;
   --color-dark-grey: #4d4d4d;
@@ -28,7 +30,7 @@
 
 body {
   margin: 0;
-  padding-top: 50px;
+  padding-top: 70px;
 }
 
 body::-webkit-scrollbar {
@@ -37,6 +39,7 @@ body::-webkit-scrollbar {
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 li {
@@ -88,8 +91,35 @@ h3 {
 
 /* introducing */
 #introducing {
+}
+
+#introducing .intro_brunch {
   max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#introducing .intro_brunch .tit_brunch {
+  font-size: var(--font-very-large);
+}
+
+#introducing .intro_brunch .desc_brunch span {
+  display: block;
+  font-size: var(--font-large);
+  color: var(--color-dark-white);
+}
+#introducing .intro_brunch .desc_brunch span:nth-child(3) {
+  color: var(--color-less-dark-white);
+}
+
+#introducing .intro_brunch .notice_wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#introducing .intro_brunch .notice_wrap .notice_item.hidden {
+  display: none;
 }
 
 .list_slide {
@@ -103,5 +133,26 @@ h3 {
 
 .list_slide li {
   display: inline-block;
-  width: 100%;
+  width: 40%;
+  text-align: center;
+}
+
+#introducing .list_slide .link_page {
+  position: relative;
+}
+
+#introducing .list_slide .title_and_desc {
+  position: absolute;
+  left: 30%;
+  top: -1300%;
+}
+
+.title_page {
+  font-size: calc(var(--font-medium) * 1.2);
+  color: var(--color-white);
+}
+
+.writer {
+  font-size: var(--font-small);
+  color: var(--color-white);
 }
