@@ -51,92 +51,45 @@
           </li>
         </ul>
       </div>
-      <ul class="list_slide">
-        <li>
-          <a href="#" class="link_page">
-            <img
-              src="./imgs/img1.jpg"
-              alt=""
-              class="thumbnail"
-              width="100%"
-              height="40%"
-            />
-            <div class="title_and_desc">
-              <h3 class="title_page">200년 된 와플 포장마차</h3>
-              <span class="writer">by 이나엘</span>
+      <div class="content_slide">
+        <input type="radio" name="slide" id="slide01" checked />
+        <input type="radio" name="slide" id="slide02" />
+        <input type="radio" name="slide" id="slide03" />
+        <div class="slidewrap">
+          <ul class="slidelist">
+            <li>
+              <a>
+                <img src="./imgs/slide01.jpg" />
+              </a>
+            </li>
+            <li>
+              <a>
+                <img src="./imgs/slide02.jpg" />
+              </a>
+            </li>
+            <li>
+              <a>
+                <img src="./imgs/slide03.jpg" />
+              </a>
+            </li>
+          </ul>
+
+          <div class="slide-control">
+            <div class="control01">
+              <label for="slide03" class="left"></label>
+              <label for="slide02" class="right"></label>
             </div>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="link_page">
-            <img
-              src="./imgs/img5.jpg"
-              alt=""
-              class="thumbnail"
-              width="100%"
-              height="40%"
-            />
-            <div class="title_and_desc">
-              <h3 class="title_page">200년 된 와플 포장마차</h3>
-              <span class="writer">by 이나엘</span>
+            <div class="control02">
+              <label for="slide01" class="left"></label>
+              <label for="slide03" class="right"></label>
             </div>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="link_page">
-            <img
-              src="./imgs/img2.jpg"
-              alt=""
-              class="thumbnail"
-              width="100%"
-              height="40%"
-            />
-            <div class="title_and_desc">
-              <h3 class="title_page">200년 된 와플 포장마차</h3>
-              <span class="writer">by 이나엘</span>
+            <div class="control03">
+              <label for="slide02" class="left"></label>
+              <label for="slide01" class="right"></label>
             </div>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="link_page">
-            <img
-              src="./imgs/img4.jpg"
-              alt=""
-              class="thumbnail"
-              width="100%"
-              height="40%"
-            />
-            <div class="title_and_desc">
-              <h3 class="title_page">200년 된 와플 포장마차</h3>
-              <span class="writer">by 이나엘</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="link_page">
-            <img
-              src="./imgs/img3.jpg"
-              alt=""
-              class="thumbnail"
-              width="100%"
-              height="40%"
-            />
-            <div class="title_and_desc">
-              <h3 class="title_page">200년 된 와플 포장마차</h3>
-              <span class="writer">by 이나엘</span>
-            </div>
-          </a>
-        </li>
-      </ul>
-      <button class="prev move_btn"><-</button>
-      <button class="next move_btn">-></button>
-      <ul class="scrollBtn">
-        <li><button>01</button></li>
-        <li><button>02</button></li>
-        <li><button>03</button></li>
-        <li><button>04</button></li>
-        <li><button>05</button></li>
-      </ul>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="keywords">
       <div class="midtitle_and_desc">
@@ -154,10 +107,30 @@
         <li><a href="#">멘탈</a></li>
         <li><a href="#">예술</a></li>
         <li><a href="#">사랑</a></li>
+        <li><a href="#">시사</a></li>
+        <li><a href="#">IT</a></li>
+        <li><a href="#">뮤직</a></li>
+        <li><a href="#">글쓰기</a></li>
+        <li><a href="#">육아</a></li>
+        <li><a href="#">요리</a></li>
+        <li><a href="#">운동</a></li>
+        <li><a href="#">멘탈</a></li>
+        <li><a href="#">예술</a></li>
+        <li><a href="#">사랑</a></li>
+        <li><a href="#">시사</a></li>
+        <li><a href="#">IT</a></li>
+        <li><a href="#">뮤직</a></li>
+        <li><a href="#">글쓰기</a></li>
+        <li><a href="#">육아</a></li>
+        <li><a href="#">요리</a></li>
+        <li><a href="#">운동</a></li>
+        <li><a href="#">멘탈</a></li>
+        <li><a href="#">예술</a></li>
+        <li><a href="#">사랑</a></li>
       </ul>
     </section>
     <section id="writers">
-      <div class="midtitleAndDesc">
+      <div class="midtitle_and_desc">
         <h3 class="midtitle txt_brunch">BRUNCH WRITERS</h3>
         <p class="desc txt_brunch">브런치 추천 작가</p>
       </div>
@@ -169,15 +142,41 @@
       <ul class="list_writers">
         <li>
           <a href="#" class="link_writer">
-            <img src="" alt="" class="writer_profile" />
+            <img src="./imgs/img4.jpg" alt="" class="writer_profile" />
             <h4 class="writer_name">JongWon</h4>
             <span class="writer_job">Student</span>
             <p class="writer_desc">군산대학교 학생입니당</p>
           </a>
           <ul class="writer_keyword">
-            <li><button class="keyword">마케팅</button></li>
-            <li><button class="keyword">자기계발</button></li>
-            <li><button class="keyword">...</button></li>
+            <li><button class="keyword brunch_btn_text">마케팅</button></li>
+            <li><button class="keyword brunch_btn_text">자기계발</button></li>
+            <li><button class="keyword brunch_btn_text">...</button></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="link_writer">
+            <img src="./imgs/img5.jpg" alt="" class="writer_profile" />
+            <h4 class="writer_name">JongWon</h4>
+            <span class="writer_job">Student</span>
+            <p class="writer_desc">군산대학교 학생입니당</p>
+          </a>
+          <ul class="writer_keyword">
+            <li><button class="keyword brunch_btn_text">마케팅</button></li>
+            <li><button class="keyword brunch_btn_text">자기계발</button></li>
+            <li><button class="keyword brunch_btn_text">...</button></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="link_writer">
+            <img src="./imgs/img6.jpg" alt="" class="writer_profile" />
+            <h4 class="writer_name">JongWon</h4>
+            <span class="writer_job">Student</span>
+            <p class="writer_desc">군산대학교 학생입니당</p>
+          </a>
+          <ul class="writer_keyword">
+            <li><button class="keyword brunch_btn_text">마케팅</button></li>
+            <li><button class="keyword brunch_btn_text">자기계발</button></li>
+            <li><button class="keyword brunch_btn_text">...</button></li>
           </ul>
         </li>
       </ul>
@@ -187,70 +186,6 @@
         <h3 class="midtitle txt_brunch">RECOMMENDED ARTICLES</h3>
         <p class="desc txt_brunch">브런치의 다양한 글을 만나보세요.</p>
       </div>
-      <ul class="list_slide">
-        <li>
-          <div class="sample">
-            <a href="#" class="link_page">
-              <img src="./imgs/img6.jpg" alt="" class="thumbnail" />
-              <h3 class="title_page">200년 된 와플 포장마차</h3>
-              <p class="desc_page">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-              <span class="writer">by 이나엘</span>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="sample">
-            <a href="#" class="link_page">
-              <img src="./imgs/img7.jpg" alt="" class="thumbnail" />
-              <h3 class="title_page">200년 된 와플 포장마차</h3>
-              <p class="desc_page">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-              <span class="writer">by 이나엘</span>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="sample">
-            <a href="#" class="link_page">
-              <img src="./imgs/img8.jpg" alt="" class="thumbnail" />
-              <h3 class="title_page">200년 된 와플 포장마차</h3>
-              <p class="desc_page">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-              <span class="writer">by 이나엘</span>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="sample">
-            <a href="#" class="link_page">
-              <img src="./imgs/img9.jpg" alt="" class="thumbnail" />
-              <h3 class="title_page">200년 된 와플 포장마차</h3>
-              <p class="desc_page">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-              <span class="writer">by 이나엘</span>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="sample">
-            <a href="#" class="link_page">
-              <img src="./imgs/img1.jpg" alt="" class="thumbnail" />
-              <h3 class="title_page">200년 된 와플 포장마차</h3>
-              <p class="desc_page">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              </p>
-              <span class="writer">by 이나엘</span>
-            </a>
-          </div>
-        </li>
-      </ul>
-      <button class="prev move_btn"><-</button>
-      <button class="next move_btn">-></button>
     </section>
     <footer>
       <div class="footerbox">

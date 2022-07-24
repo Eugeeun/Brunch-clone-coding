@@ -122,37 +122,177 @@ h3 {
   display: none;
 }
 
-.list_slide {
-  width: 100%;
-  transform: translateX(0px);
-  transition: -webkit-transform 0.3s ease 0s;
-  background-color: gray;
-  overflow-x: scroll;
+/* content_slide */
+.content_slide [id*='slide'] {
+  display: none;
+}
+
+/* 슬라이드 영역 - max-width 크기를 조절해주면 됩니다*/
+.content_slide .slidewrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* overflow: hidden; */
+  position: relative;
+}
+.content_slide .slidelist {
   white-space: nowrap;
+  font-size: 0;
 }
-
-.list_slide li {
+.content_slide .slidelist > li {
   display: inline-block;
-  width: 40%;
-  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  transition: all 0.3s;
 }
-
-#introducing .list_slide .link_page {
+.content_slide .slidelist > li > a {
+  display: block;
   position: relative;
 }
 
-#introducing .list_slide .title_and_desc {
+/* 좌우로 넘기는 LABEL버튼에 대한 스타일 */
+.content_slide .slide-control {
   position: absolute;
-  left: 30%;
-  top: -1300%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+.content_slide .slide-control label {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  cursor: pointer;
+}
+.content_slide .slide-control .left {
+  left: 30px;
+  background: url('./imgs/left.png') center center / 100% no-repeat;
+}
+.content_slide .slide-control .right {
+  right: 30px;
+  background: url('./imgs/right.png') center center / 100% no-repeat;
+}
+.content_slide .slide-control [class*='control'] {
+  display: none;
 }
 
-.title_page {
-  font-size: calc(var(--font-medium) * 1.2);
-  color: var(--color-white);
+/* INPUT이 체크되면 변화값이 li까지 전달되는 스타일 */
+.content_slide [id='slide01']:checked ~ .slidewrap .slidelist > li {
+  transform: translateX(0%);
+}
+.content_slide [id='slide02']:checked ~ .slidewrap .slidelist > li {
+  transform: translateX(-100%);
+}
+.content_slide [id='slide03']:checked ~ .slidewrap .slidelist > li {
+  transform: translateX(-200%);
 }
 
-.writer {
+/*  INPUT이 체크되면 변화값이 좌우 슬라이드 버튼을 담고 있는 div 까지 전달되는 스타일 */
+.content_slide [id='slide01']:checked ~ .slidewrap .control01 {
+  display: block;
+}
+.content_slide [id='slide02']:checked ~ .slidewrap .control02 {
+  display: block;
+}
+.content_slide [id='slide03']:checked ~ .slidewrap .control03 {
+  display: block;
+}
+
+/* keywords */
+.midtitle {
+  font-size: var(--font-medium);
+}
+
+.desc {
   font-size: var(--font-small);
-  color: var(--color-white);
+}
+
+.midtitle_and_desc {
+  text-align: center;
+  margin-top: 250px;
+}
+
+.category {
+  max-width: 1280px;
+  margin: 0 auto;
+  column-count: 10;
+  margin-top: 50px;
+}
+
+.category li {
+  width: 130px;
+  height: 130px;
+  border: 1px solid var(--color-less-dark-white);
+  text-align: center;
+  line-height: 130px;
+}
+
+/* writers */
+#writers {
+  margin-top: 250px;
+  background-color: var(--color-less-dark-white);
+}
+
+.recommended_category {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.brunch_btn_text {
+  border-radius: 20px;
+  padding: var(--padding-side) var(--padding-side);
+  color: var(--color-grey);
+  font-size: var(--font-regular);
+}
+
+.list_writers {
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.list_writers > li {
+  background-color: var(--color-white);
+  text-align: center;
+  border: 1px solid var(--color-less-dark-white);
+  width: 30%;
+  height: 400px;
+  display: inline-block;
+}
+
+.list_writers li img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 50px;
+}
+
+.writer_name {
+  margin: 0;
+  margin-top: 20px;
+  font-size: calc(var(--font-medium) * 0.9);
+  color: var(--color-dark-grey);
+}
+
+.writer_job {
+  font-size: var(--font-small);
+  color: var(--color-grey);
+}
+
+.writer_desc {
+  margin: 20px 0;
+  font-size: calc(var(--font-micro) * 1.2);
+  color: var(--color-grey);
+}
+
+.writer_keyword > li {
+  display: inline-block;
+}
+
+.writer_keyword .brunch_btn_text {
+  font-size: calc(var(--font-regular) * 0.8);
 }
