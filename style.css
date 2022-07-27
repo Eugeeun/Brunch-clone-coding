@@ -16,6 +16,7 @@
   --color-less-dark-white: #dad8d8;
   --color-dark-white: #bdbdbd;
   --color-black: #000000;
+  --color-light-black: #1b1b1b;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
@@ -203,10 +204,12 @@ h3 {
 /* keywords */
 .midtitle {
   font-size: var(--font-medium);
+  text-align: center;
 }
 
 .desc {
   font-size: var(--font-small);
+  text-align: center;
 }
 
 .midtitle_and_desc {
@@ -233,6 +236,11 @@ h3 {
 #writers {
   margin-top: 250px;
   background-color: var(--color-less-dark-white);
+  padding: 100px 0;
+}
+
+#writers > .midtitle_and_desc {
+  margin-top: 0px;
 }
 
 .recommended_category {
@@ -295,4 +303,108 @@ h3 {
 
 .writer_keyword .brunch_btn_text {
   font-size: calc(var(--font-regular) * 0.8);
+}
+
+#recommended_articles {
+  margin-top: 150px;
+}
+
+/* footer */
+footer {
+  background-color: var(--color-light-black);
+  color: var(--color-white);
+  margin-top: 200px;
+}
+
+.footerbox {
+  padding: 30px 200px;
+}
+
+.inner_foot {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-dark-grey);
+  padding: 15px;
+}
+
+.fa-font-awesome {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: 10px;
+  font-size: var(--font-medium);
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.brunch_quotation {
+  margin: 0;
+}
+
+.quoter {
+  color: var(--color-light-grey);
+}
+
+.corp_and_logos {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.corp {
+  color: var(--color-light-grey);
+}
+
+.logos {
+  display: flex;
+}
+
+.logos > li > i {
+  font-size: var(--font-medium);
+  padding: 10px;
+}
+
+/* side_menu */
+#side_menu {
+  position: fixed;
+  top: 0;
+  left: -330px;
+  width: 330px;
+  height: 100vh;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  border: 1px solid var(--color-less-dark-white);
+  background-color: var(--color-white);
+}
+
+.infos_and_menu > .writer_profile {
+  background-color: var(--color-less-dark-white);
+  padding: 50px 0;
+}
+
+.infos_and_menu > .writer_profile > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.infos_and_menu .writer_profile span {
+  display: block;
+}
+
+.infos_and_menu .menu_list {
+  padding: 50px 0;
+}
+
+.infos_and_menu .menu_list li {
+  margin: 30px 0;
+  font-size: var(--font-regular);
+}
+
+.setting_and_logout {
+  padding: 50px 0;
 }
